@@ -16,6 +16,17 @@
 		CC67807A257C2E4C00F4D36A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC678079257C2E4C00F4D36A /* main.m */; };
 		CC678084257C2E4C00F4D36A /* FetchCodingExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC678083257C2E4C00F4D36A /* FetchCodingExerciseTests.m */; };
 		CC67808F257C2E4C00F4D36A /* FetchCodingExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67808E257C2E4C00F4D36A /* FetchCodingExerciseUITests.m */; };
+		CC6780AA257C2ED500F4D36A /* FetchEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780A6257C2ED400F4D36A /* FetchEventDetailView.m */; };
+		CC6780AB257C2ED500F4D36A /* FetchEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780A8257C2ED500F4D36A /* FetchEventTableViewCell.m */; };
+		CC6780CC257C2EF700F4D36A /* FetchEventViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780CB257C2EF700F4D36A /* FetchEventViewModel.m */; };
+		CC6780D6257C304100F4D36A /* SeatGeeksEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780D1257C304100F4D36A /* SeatGeeksEvent.m */; };
+		CC6780D7257C304100F4D36A /* FetchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780D5257C304100F4D36A /* FetchEvent.m */; };
+		CC6780E7257C310B00F4D36A /* FetchEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780E3257C310B00F4D36A /* FetchEventDetailViewController.m */; };
+		CC6780E8257C310B00F4D36A /* FetchEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780E6257C310B00F4D36A /* FetchEventTableViewController.m */; };
+		CC6780FC257C3F3A00F4D36A /* FetchThemeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780FB257C3F3900F4D36A /* FetchThemeUtility.m */; };
+		CC678105257C4D4600F4D36A /* SeatGeekLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC678104257C4D4600F4D36A /* SeatGeekLoader.m */; };
+		CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67810A257C536B00F4D36A /* FetchRootViewController.m */; };
+		CC678110257C58FC00F4D36A /* FakeDataFile in Resources */ = {isa = PBXBuildFile; fileRef = CC67810F257C58FC00F4D36A /* FakeDataFile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,27 @@
 		CC67808A257C2E4C00F4D36A /* FetchCodingExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchCodingExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC67808E257C2E4C00F4D36A /* FetchCodingExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchCodingExerciseUITests.m; sourceTree = "<group>"; };
 		CC678090257C2E4C00F4D36A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC6780A6257C2ED400F4D36A /* FetchEventDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventDetailView.m; sourceTree = "<group>"; };
+		CC6780A7257C2ED400F4D36A /* FetchEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventTableViewCell.h; sourceTree = "<group>"; };
+		CC6780A8257C2ED500F4D36A /* FetchEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventTableViewCell.m; sourceTree = "<group>"; };
+		CC6780A9257C2ED500F4D36A /* FetchEventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventDetailView.h; sourceTree = "<group>"; };
+		CC6780CA257C2EF700F4D36A /* FetchEventViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventViewModel.h; sourceTree = "<group>"; };
+		CC6780CB257C2EF700F4D36A /* FetchEventViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventViewModel.m; sourceTree = "<group>"; };
+		CC6780D1257C304100F4D36A /* SeatGeeksEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatGeeksEvent.m; sourceTree = "<group>"; };
+		CC6780D2257C304100F4D36A /* FetchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEvent.h; sourceTree = "<group>"; };
+		CC6780D4257C304100F4D36A /* SeatGeeksEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatGeeksEvent.h; sourceTree = "<group>"; };
+		CC6780D5257C304100F4D36A /* FetchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEvent.m; sourceTree = "<group>"; };
+		CC6780E3257C310B00F4D36A /* FetchEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventDetailViewController.m; sourceTree = "<group>"; };
+		CC6780E4257C310B00F4D36A /* FetchEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventDetailViewController.h; sourceTree = "<group>"; };
+		CC6780E5257C310B00F4D36A /* FetchEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventTableViewController.h; sourceTree = "<group>"; };
+		CC6780E6257C310B00F4D36A /* FetchEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventTableViewController.m; sourceTree = "<group>"; };
+		CC6780FA257C3F3900F4D36A /* FetchThemeUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchThemeUtility.h; sourceTree = "<group>"; };
+		CC6780FB257C3F3900F4D36A /* FetchThemeUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchThemeUtility.m; sourceTree = "<group>"; };
+		CC678103257C4D4600F4D36A /* SeatGeekLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatGeekLoader.h; sourceTree = "<group>"; };
+		CC678104257C4D4600F4D36A /* SeatGeekLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatGeekLoader.m; sourceTree = "<group>"; };
+		CC678109257C536B00F4D36A /* FetchRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchRootViewController.h; sourceTree = "<group>"; };
+		CC67810A257C536B00F4D36A /* FetchRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchRootViewController.m; sourceTree = "<group>"; };
+		CC67810F257C58FC00F4D36A /* FakeDataFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = FakeDataFile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +136,14 @@
 		CC678066257C2E4900F4D36A /* FetchCodingExercise */ = {
 			isa = PBXGroup;
 			children = (
-				CC678067257C2E4900F4D36A /* AppDelegate.h */,
-				CC678068257C2E4900F4D36A /* AppDelegate.m */,
-				CC67806A257C2E4900F4D36A /* SceneDelegate.h */,
-				CC67806B257C2E4900F4D36A /* SceneDelegate.m */,
-				CC67806D257C2E4900F4D36A /* ViewController.h */,
-				CC67806E257C2E4900F4D36A /* ViewController.m */,
-				CC678070257C2E4900F4D36A /* Main.storyboard */,
-				CC678073257C2E4C00F4D36A /* Assets.xcassets */,
-				CC678075257C2E4C00F4D36A /* LaunchScreen.storyboard */,
+				CC6780E1257C30F300F4D36A /* ViewControllers */,
+				CC6780C9257C2EF700F4D36A /* ViewModels */,
+				CC6780A5257C2ED400F4D36A /* Views */,
+				CC6780D0257C304100F4D36A /* Model */,
+				CC6780EF257C35CD00F4D36A /* ApplicationSetup */,
+				CC6780F9257C3F1D00F4D36A /* Utility */,
 				CC678078257C2E4C00F4D36A /* Info.plist */,
-				CC678079257C2E4C00F4D36A /* main.m */,
+				CC67810F257C58FC00F4D36A /* FakeDataFile */,
 			);
 			path = FetchCodingExercise;
 			sourceTree = "<group>";
@@ -135,6 +164,79 @@
 				CC678090257C2E4C00F4D36A /* Info.plist */,
 			);
 			path = FetchCodingExerciseUITests;
+			sourceTree = "<group>";
+		};
+		CC6780A5257C2ED400F4D36A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC6780A9257C2ED500F4D36A /* FetchEventDetailView.h */,
+				CC6780A6257C2ED400F4D36A /* FetchEventDetailView.m */,
+				CC6780A7257C2ED400F4D36A /* FetchEventTableViewCell.h */,
+				CC6780A8257C2ED500F4D36A /* FetchEventTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC6780C9257C2EF700F4D36A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CC6780CA257C2EF700F4D36A /* FetchEventViewModel.h */,
+				CC6780CB257C2EF700F4D36A /* FetchEventViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CC6780D0257C304100F4D36A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC6780D4257C304100F4D36A /* SeatGeeksEvent.h */,
+				CC6780D1257C304100F4D36A /* SeatGeeksEvent.m */,
+				CC6780D2257C304100F4D36A /* FetchEvent.h */,
+				CC6780D5257C304100F4D36A /* FetchEvent.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC6780E1257C30F300F4D36A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC6780E4257C310B00F4D36A /* FetchEventDetailViewController.h */,
+				CC6780E3257C310B00F4D36A /* FetchEventDetailViewController.m */,
+				CC6780E5257C310B00F4D36A /* FetchEventTableViewController.h */,
+				CC6780E6257C310B00F4D36A /* FetchEventTableViewController.m */,
+				CC678109257C536B00F4D36A /* FetchRootViewController.h */,
+				CC67810A257C536B00F4D36A /* FetchRootViewController.m */,
+			);
+			name = ViewControllers;
+			path = ../../FetchSeatGeekExercise/Shared/ViewControllers;
+			sourceTree = "<group>";
+		};
+		CC6780EF257C35CD00F4D36A /* ApplicationSetup */ = {
+			isa = PBXGroup;
+			children = (
+				CC678067257C2E4900F4D36A /* AppDelegate.h */,
+				CC678068257C2E4900F4D36A /* AppDelegate.m */,
+				CC67806A257C2E4900F4D36A /* SceneDelegate.h */,
+				CC67806B257C2E4900F4D36A /* SceneDelegate.m */,
+				CC67806D257C2E4900F4D36A /* ViewController.h */,
+				CC67806E257C2E4900F4D36A /* ViewController.m */,
+				CC678075257C2E4C00F4D36A /* LaunchScreen.storyboard */,
+				CC678079257C2E4C00F4D36A /* main.m */,
+				CC678070257C2E4900F4D36A /* Main.storyboard */,
+				CC678073257C2E4C00F4D36A /* Assets.xcassets */,
+			);
+			path = ApplicationSetup;
+			sourceTree = "<group>";
+		};
+		CC6780F9257C3F1D00F4D36A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CC6780FA257C3F3900F4D36A /* FetchThemeUtility.h */,
+				CC6780FB257C3F3900F4D36A /* FetchThemeUtility.m */,
+				CC678103257C4D4600F4D36A /* SeatGeekLoader.h */,
+				CC678104257C4D4600F4D36A /* SeatGeekLoader.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC678077257C2E4C00F4D36A /* LaunchScreen.storyboard in Resources */,
+				CC678110257C58FC00F4D36A /* FakeDataFile in Resources */,
 				CC678074257C2E4C00F4D36A /* Assets.xcassets in Resources */,
 				CC678072257C2E4900F4D36A /* Main.storyboard in Resources */,
 			);
@@ -266,10 +369,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6780D6257C304100F4D36A /* SeatGeeksEvent.m in Sources */,
 				CC67806F257C2E4900F4D36A /* ViewController.m in Sources */,
+				CC6780D7257C304100F4D36A /* FetchEvent.m in Sources */,
+				CC6780E8257C310B00F4D36A /* FetchEventTableViewController.m in Sources */,
+				CC6780AA257C2ED500F4D36A /* FetchEventDetailView.m in Sources */,
+				CC678105257C4D4600F4D36A /* SeatGeekLoader.m in Sources */,
+				CC6780CC257C2EF700F4D36A /* FetchEventViewModel.m in Sources */,
+				CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */,
 				CC678069257C2E4900F4D36A /* AppDelegate.m in Sources */,
+				CC6780AB257C2ED500F4D36A /* FetchEventTableViewCell.m in Sources */,
 				CC67807A257C2E4C00F4D36A /* main.m in Sources */,
+				CC6780E7257C310B00F4D36A /* FetchEventDetailViewController.m in Sources */,
 				CC67806C257C2E4900F4D36A /* SceneDelegate.m in Sources */,
+				CC6780FC257C3F3A00F4D36A /* FetchThemeUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
