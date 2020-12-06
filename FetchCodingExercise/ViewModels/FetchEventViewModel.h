@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype)initWithEvent:(FetchEvent *)event;
 -(void)toggleFavoriteStatus;
+-(NSString *)buttonTitleForFavoriteStatus;
 
 @end
 

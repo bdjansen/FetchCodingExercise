@@ -27,6 +27,7 @@
 		CC678105257C4D4600F4D36A /* SeatGeekLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC678104257C4D4600F4D36A /* SeatGeekLoader.m */; };
 		CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67810A257C536B00F4D36A /* FetchRootViewController.m */; };
 		CC678110257C58FC00F4D36A /* FakeDataFile in Resources */ = {isa = PBXBuildFile; fileRef = CC67810F257C58FC00F4D36A /* FakeDataFile */; };
+		CCDE8A42257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		CC678109257C536B00F4D36A /* FetchRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchRootViewController.h; sourceTree = "<group>"; };
 		CC67810A257C536B00F4D36A /* FetchRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchRootViewController.m; sourceTree = "<group>"; };
 		CC67810F257C58FC00F4D36A /* FakeDataFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = FakeDataFile; sourceTree = "<group>"; };
+		CCDE8A40257D6DCA00ACFB6B /* FetchFavoriteEventsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchFavoriteEventsManager.h; sourceTree = "<group>"; };
+		CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchFavoriteEventsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +238,8 @@
 				CC6780FB257C3F3900F4D36A /* FetchThemeUtility.m */,
 				CC678103257C4D4600F4D36A /* SeatGeekLoader.h */,
 				CC678104257C4D4600F4D36A /* SeatGeekLoader.m */,
+				CCDE8A40257D6DCA00ACFB6B /* FetchFavoriteEventsManager.h */,
+				CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				CC6780D7257C304100F4D36A /* FetchEvent.m in Sources */,
 				CC6780E8257C310B00F4D36A /* FetchEventTableViewController.m in Sources */,
 				CC6780AA257C2ED500F4D36A /* FetchEventDetailView.m in Sources */,
+				CCDE8A42257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m in Sources */,
 				CC678105257C4D4600F4D36A /* SeatGeekLoader.m in Sources */,
 				CC6780CC257C2EF700F4D36A /* FetchEventViewModel.m in Sources */,
 				CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */,

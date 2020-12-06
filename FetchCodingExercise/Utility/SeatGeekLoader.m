@@ -11,8 +11,8 @@
 
 @implementation SeatGeekLoader
 
-const NSString *secret = @"ed130ff7caaa99fa8eced9454740cf6194b39f0b3c3e7a714c18076e42096650";
-const NSString *clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
+static NSString *const secret = @"ed130ff7caaa99fa8eced9454740cf6194b39f0b3c3e7a714c18076e42096650";
+static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
 
 - (NSArray<SeatGeeksEvent *> *)getEventData {
     NSData *serverData = [self _loadEventDataFromSeatGeekFAKE];

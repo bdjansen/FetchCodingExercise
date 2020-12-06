@@ -9,7 +9,7 @@
 #import "FetchEventViewModel.h"
 #import "FetchThemeUtility.h"
 
-const CGFloat kCellContentIndex = 12;
+static CGFloat const kCellContentIndex = 12;
 
 @implementation FetchEventTableViewCell {
     FetchEventViewModel *_event;

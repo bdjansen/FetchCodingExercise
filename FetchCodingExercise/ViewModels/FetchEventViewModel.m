@@ -50,6 +50,16 @@
 
 -(void)toggleFavoriteStatus {
     _event.favorited = !_event.favorited;
+    //[self _updateListOfFavorites];
 }
 
+
+
+-(NSString *)buttonTitleForFavoriteStatus {
+    if (_event.favorited) {
+        return @"Unfavorite";
+    } else {
+        return @"Favorite";
+    }
+}
 @end
