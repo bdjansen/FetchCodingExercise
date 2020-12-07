@@ -32,7 +32,8 @@ static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
     NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
 
     if([responseCode statusCode] != 200){
-        NSLog(@"Error getting %@, HTTP status code %i", urlString, [responseCode statusCode]);
+        NSException *serverException = [[NSException alloc] initWithName:@"Server Error" reason:[NSString stringWithFormat:@"Trying to get events returned error code: %li", responseCode.statusCode] userInfo:nil];
+        @throw serverException;
         return nil;
     }
 
@@ -65,7 +66,7 @@ static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
     NSData *thumbnail = [[NSData alloc] initWithContentsOfURL:thumbnailURL];
     NSData *image = [[NSData alloc] initWithContentsOfURL:imageURL];
     
-    SeatGeekEvent *event = [[SeatGeekEvent alloc] initWithID:eventID name:title location:location time:time thumbnail:thumbnail image:image];
+    SeatGeekEvent *event = [[SeatGeekEvent alloc] initWithID:eventID name:title location:location time:time thumbnail:thumbnail image:image timeTBD:NO];
     return event;
 }
 
