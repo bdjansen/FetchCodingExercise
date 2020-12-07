@@ -13,11 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FetchEventViewModel : NSObject
 
+@property (nonatomic, readonly) NSString *ID;
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *location;
 @property (nonatomic, readonly) NSString *displayTime;
-@property (nonatomic, readonly) NSURL *thumbnail;
-@property (nonatomic, readonly) NSURL *image;
+@property (nonatomic, readonly) NSData *thumbnail;
+@property (nonatomic, readonly) NSData *image;
 @property (nonatomic, readonly) BOOL favorited;
 
 -(instancetype)initWithEvent:(FetchEvent *)event;

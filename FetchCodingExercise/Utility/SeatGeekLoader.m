@@ -68,8 +68,10 @@ static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
     NSDate *time = [self _getTimeFromEvent:eventDict];
     NSString *location = [self _getLocationFromEvent:eventDict];
     //TODO: Get photos from URL
-    NSURL *thumbnail = [self _getThumbnailFromEvent:eventDict];
-    NSURL *image = [self _getImageFromEvent:eventDict];
+    NSURL *thumbnailURL = [self _getThumbnailFromEvent:eventDict];
+    NSURL *imageURL = [self _getImageFromEvent:eventDict];
+    NSData *thumbnail = [[NSData alloc] initWithContentsOfURL:thumbnailURL];
+    NSData *image = [[NSData alloc] initWithContentsOfURL:imageURL];
     
     SeatGeeksEvent *event = [[SeatGeeksEvent alloc] initWithID:eventID name:title location:location time:time thumbnail:thumbnail image:image];
     return event;

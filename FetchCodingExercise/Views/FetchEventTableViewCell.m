@@ -13,11 +13,11 @@ static CGFloat const kCellContentIndex = 12;
 
 @implementation FetchEventTableViewCell {
     FetchEventViewModel *_event;
-    UIImageView *_favoritedView;
     UILabel *_name;
     UILabel *_location;
     UILabel *_time;
     UIImageView *_thumbnailView;
+    UIView *_favoriteView;
 }
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -28,6 +28,7 @@ static CGFloat const kCellContentIndex = 12;
         _location = [self _createLocationLabel];
         _time = [self _createTimeLabel];
         _thumbnailView = [self _createImageView];
+        _favoriteView = [self _createFavoriteView];
         
         [self.contentView addSubview:stackView];
         [stackView.leftAnchor constraintGreaterThanOrEqualToAnchor:self.contentView.leftAnchor constant:kCellContentIndex].active = YES;
@@ -45,6 +46,12 @@ static CGFloat const kCellContentIndex = 12;
         [_thumbnailView.rightAnchor constraintEqualToAnchor:stackView.leftAnchor constant:-kCellContentIndex].active = YES;
         _thumbnailView.translatesAutoresizingMaskIntoConstraints = NO;
         
+        [_thumbnailView addSubview:_favoriteView];
+        [_favoriteView.leftAnchor constraintEqualToAnchor:_thumbnailView.leftAnchor constant:-kCellContentIndex].active = YES;
+        [_favoriteView.topAnchor constraintEqualToAnchor:_thumbnailView.topAnchor constant:-kCellContentIndex].active = YES;
+        _favoriteView.translatesAutoresizingMaskIntoConstraints = NO;
+        _favoriteView.hidden = YES;
+        
         [stackView addArrangedSubview:_name];
         [stackView addArrangedSubview:_location];
         [stackView addArrangedSubview:_time];
@@ -57,6 +64,7 @@ static CGFloat const kCellContentIndex = 12;
     _name.text = _event.name;
     _location.text = _event.location;
     _time.text = _event.displayTime;
+    _favoriteView.hidden = !_event.favorited;
 }
 
 -(void)setThumbnail:(UIImage *)thumbnail {
@@ -66,10 +74,6 @@ static CGFloat const kCellContentIndex = 12;
 
 -(FetchEventViewModel *)event {
     return _event;
-}
-
--(void)_addBackgroundView {
-    
 }
 
 -(UIStackView *)_createStackView {
@@ -119,6 +123,16 @@ static CGFloat const kCellContentIndex = 12;
     imageView.clipsToBounds = YES;
     [imageView.heightAnchor constraintEqualToConstant:80].active = YES;
     [imageView.widthAnchor constraintEqualToConstant:80].active = YES;
+    return imageView;
+}
+
+-(UIImageView *)_createFavoriteView {
+    UIImageView *imageView = [UIImageView new];
+    imageView.backgroundColor = UIColor.blueColor;
+    imageView.layer.cornerRadius = 10;
+    imageView.clipsToBounds = YES;
+    [imageView.heightAnchor constraintEqualToConstant:40].active = YES;
+    [imageView.widthAnchor constraintEqualToConstant:40].active = YES;
     return imageView;
 }
 

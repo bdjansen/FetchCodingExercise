@@ -9,7 +9,7 @@
 
 @implementation SeatGeeksEvent
 
--(instancetype)initWithID:(NSString *)ID name:(NSString *)name location:(NSString *)location time:(NSDate *)time thumbnail:(NSURL *)thumbnail image:(NSURL *)image {
+-(instancetype)initWithID:(NSString *)ID name:(NSString *)name location:(NSString *)location time:(NSDate *)time thumbnail:(NSData *)thumbnail image:(NSData *)image {
     self = [super init];
     if (self) {
         _ID = ID;
