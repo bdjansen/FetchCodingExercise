@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SeatGeeksEvent.h"
+#import "SeatGeekEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,8 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSData *thumbnail;
 @property (nonatomic, readonly) NSData *image;
 @property (nonatomic) BOOL favorited;
+@property (nonatomic) BOOL timeTBD;
 
--(instancetype)initWithSGEvent:(SeatGeeksEvent *)event;
+-(instancetype)initWithSGEvent:(SeatGeekEvent *)event;
+-(void)toggleFavoriteStatus;
 
 @end
 

@@ -7,6 +7,11 @@
 
 #import "FetchEventDetailView.h"
 #import "FetchEventViewModel.h"
+#import "FetchThemeUtility.h"
+
+static CGFloat const kCellContentIndex = 8;
+static CGFloat const kTextSpacingSize = 12;
+static CGFloat const kCornerRadius = 5;
 
 @implementation FetchEventDetailView {
     FetchEventViewModel *_event;
@@ -31,8 +36,8 @@
         [self _addBackgroundView];
         
         [_backgroundView addSubview:stackView];
-        [stackView.heightAnchor constraintEqualToAnchor:_backgroundView.heightAnchor constant:-16].active = YES;
-        [stackView.widthAnchor constraintEqualToAnchor:_backgroundView.widthAnchor constant:-16].active = YES;
+        [stackView.heightAnchor constraintEqualToAnchor:_backgroundView.heightAnchor constant:-2 * kCellContentIndex].active = YES;
+        [stackView.widthAnchor constraintEqualToAnchor:_backgroundView.widthAnchor constant:-2 * kCellContentIndex].active = YES;
         [stackView.centerXAnchor constraintEqualToAnchor:_backgroundView.centerXAnchor].active = YES;
         [stackView.centerYAnchor constraintEqualToAnchor:_backgroundView.centerYAnchor].active = YES;
         stackView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -72,56 +77,44 @@
     infoStackView.axis = UILayoutConstraintAxisVertical;
     infoStackView.distribution = UIStackViewDistributionEqualSpacing;
     infoStackView.alignment = UIStackViewAlignmentLeading;
-    infoStackView.spacing = 12;
+    infoStackView.spacing = kTextSpacingSize;
     infoStackView.backgroundColor = UIColor.whiteColor;
     return infoStackView;
 }
 
 -(UILabel *)_createNameLabel {
-    UILabel *name = [UILabel new];
-    name.numberOfLines = 0;
+    UILabel *name = [FetchThemeUtility DetailViewTitle];
     name.text = _event.name;
-    name.font = [name.font fontWithSize:30];
     return name;
 }
 
 -(UILabel *)_createTimeLabel {
-    UILabel *time = [UILabel new];
-    time.numberOfLines = 0;
+    UILabel *time = [FetchThemeUtility DetailViewSubtitle];
+    time.textColor = UIColor.blackColor;
     time.text = _event.displayTime;
-    time.font = [time.font fontWithSize:25];
     return time;
 }
 
--(NSDateFormatter *)_eventFormatter {
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.timeZone = [NSTimeZone systemTimeZone];
-    formatter.dateFormat = @"MM-dd-YYYY HH:mm:SS";
-    return formatter;
-}
-
 -(UILabel *)_createLocationLabel {
-    UILabel *location = [UILabel new];
-    location.numberOfLines = 0;
+    UILabel *location = [FetchThemeUtility DetailViewSubtitle];
     location.text = _event.location;
-    location.font = [location.font fontWithSize:20];
-    location.textColor = UIColor.grayColor;
     return location;
 }
 
 -(UIView *)_createSeparatorView {
     UIView *separatorView = [UIView new];
-    separatorView.backgroundColor = UIColor.grayColor;
-    separatorView.layer.cornerRadius = 5;
+    separatorView.backgroundColor = UIColor.lightGrayColor;
+    separatorView.layer.cornerRadius = kCornerRadius;
     [separatorView.heightAnchor constraintEqualToConstant:2].active = YES;
     return separatorView;
 }
 
 -(UIImageView *)_createImageView {
-    UIImageView *separatorView = [UIImageView new];
-    separatorView.backgroundColor = UIColor.blueColor;
-    separatorView.layer.cornerRadius = 5;
-    [separatorView.heightAnchor constraintGreaterThanOrEqualToConstant:50].active = YES;
-    return separatorView;
+    UIImageView *imageView = [UIImageView new];
+    imageView.backgroundColor = UIColor.blueColor;
+    imageView.layer.cornerRadius = kCornerRadius;
+    imageView.clipsToBounds = YES;
+    [imageView.heightAnchor constraintGreaterThanOrEqualToConstant:50].active = YES;
+    return imageView;
 }
 @end

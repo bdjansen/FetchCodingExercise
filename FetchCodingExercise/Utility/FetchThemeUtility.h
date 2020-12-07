@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,6 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSDateFormatter *)SeatGeekEventDateFormatter;
 +(NSDateFormatter *)FetchEventDateFormatter;
++(UIImage *)FavoriteButton;
++(UIImage *)UnfavoriteButton;
+
++(UILabel *)DetailViewTitle;
++(UILabel *)DetailViewSubtitle;
++(UILabel *)CellTitle;
++(UILabel *)CellSubtitle;
 
 @end
 

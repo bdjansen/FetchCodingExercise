@@ -6,7 +6,7 @@
 //
 
 #import "SeatGeekLoader.h"
-#import "SeatGeeksEvent.h"
+#import "SeatGeekEvent.h"
 #import "FetchThemeUtility.h"
 
 @implementation SeatGeekLoader
@@ -14,9 +14,9 @@
 static NSString *const secret = @"ed130ff7caaa99fa8eced9454740cf6194b39f0b3c3e7a714c18076e42096650";
 static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
 
-- (NSArray<SeatGeeksEvent *> *)getEventData {
-    NSData *serverData = [self _loadEventDataFromSeatGeekFAKE];
-    NSArray<SeatGeeksEvent *> *eventData = [self _parseSeatGeekData:serverData];
+- (NSArray<SeatGeekEvent *> *)getEventData {
+    NSData *serverData = [self _loadEventDataFromSeatGeek];
+    NSArray<SeatGeekEvent *> *eventData = [self _parseSeatGeekData:serverData];
     return eventData;
 }
 
@@ -39,29 +39,21 @@ static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
     return oResponseData;
 }
 
-- (NSData *)_loadEventDataFromSeatGeekFAKE {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"FakeDataFile" ofType:nil];
-    NSString *dataString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    NSData* data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
-
-    return data;
-}
-
--(NSArray<SeatGeeksEvent *> *)_parseSeatGeekData:(NSData *)data {
+-(NSArray<SeatGeekEvent *> *)_parseSeatGeekData:(NSData *)data {
     NSAssert(data != nil, @"Do not try to parse data that does not exist.");
-    NSMutableArray<SeatGeeksEvent *> *events = [NSMutableArray<SeatGeeksEvent *> new];
+    NSMutableArray<SeatGeekEvent *> *events = [NSMutableArray<SeatGeekEvent *> new];
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     NSArray<NSDictionary *> *eventsArray = [json objectForKey:@"events"];
     
     for (NSDictionary *eventDict in eventsArray) {
-        SeatGeeksEvent *event = [self _createSGEventFromEventDictionary:eventDict];
+        SeatGeekEvent *event = [self _createSGEventFromEventDictionary:eventDict];
         [events addObject:event];
     }
     
     return events;
 }
 
--(SeatGeeksEvent *)_createSGEventFromEventDictionary:(NSDictionary *)eventDict {
+-(SeatGeekEvent *)_createSGEventFromEventDictionary:(NSDictionary *)eventDict {
     NSAssert(eventDict != nil, @"Do not try to create an event from empty data");
     NSString *title = eventDict[@"title"];
     NSString *eventID = eventDict[@"id"];
@@ -73,7 +65,7 @@ static NSString *const clientID = @"MjE0MjA3NjN8MTYwNzIxMDc1Ny44NjUxMTQ";
     NSData *thumbnail = [[NSData alloc] initWithContentsOfURL:thumbnailURL];
     NSData *image = [[NSData alloc] initWithContentsOfURL:imageURL];
     
-    SeatGeeksEvent *event = [[SeatGeeksEvent alloc] initWithID:eventID name:title location:location time:time thumbnail:thumbnail image:image];
+    SeatGeekEvent *event = [[SeatGeekEvent alloc] initWithID:eventID name:title location:location time:time thumbnail:thumbnail image:image];
     return event;
 }
 

@@ -9,7 +9,7 @@
 
 @implementation FetchEvent
 
--(instancetype)initWithSGEvent:(SeatGeeksEvent *)event {
+-(instancetype)initWithSGEvent:(SeatGeekEvent *)event {
     self = [super init];
     if (self) {
         _ID = event.ID;
@@ -19,6 +19,7 @@
         _thumbnail = event.thumbnail;
         _image = event.image;
         _favorited = NO;
+        _timeTBD = event.timeTBD;
     }
     return self;
 }

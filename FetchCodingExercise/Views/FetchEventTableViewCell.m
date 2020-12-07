@@ -9,7 +9,10 @@
 #import "FetchEventViewModel.h"
 #import "FetchThemeUtility.h"
 
-static CGFloat const kCellContentIndex = 12;
+static CGFloat const kCellContentIndex = 20;
+static CGFloat const kThumbnailSize = 80;
+static CGFloat const kFavoriteViewSize = 20;
+static CGFloat const kTextSpacingSize = 12;
 
 @implementation FetchEventTableViewCell {
     FetchEventViewModel *_event;
@@ -17,7 +20,7 @@ static CGFloat const kCellContentIndex = 12;
     UILabel *_location;
     UILabel *_time;
     UIImageView *_thumbnailView;
-    UIView *_favoriteView;
+    UIImageView *_favoriteView;
 }
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -46,9 +49,9 @@ static CGFloat const kCellContentIndex = 12;
         [_thumbnailView.rightAnchor constraintEqualToAnchor:stackView.leftAnchor constant:-kCellContentIndex].active = YES;
         _thumbnailView.translatesAutoresizingMaskIntoConstraints = NO;
         
-        [_thumbnailView addSubview:_favoriteView];
-        [_favoriteView.leftAnchor constraintEqualToAnchor:_thumbnailView.leftAnchor constant:-kCellContentIndex].active = YES;
-        [_favoriteView.topAnchor constraintEqualToAnchor:_thumbnailView.topAnchor constant:-kCellContentIndex].active = YES;
+        [self.contentView addSubview:_favoriteView];
+        [_favoriteView.leftAnchor constraintEqualToAnchor:_thumbnailView.leftAnchor constant:-kFavoriteViewSize / 2].active = YES;
+        [_favoriteView.topAnchor constraintEqualToAnchor:_thumbnailView.topAnchor constant:-kFavoriteViewSize / 3].active = YES;
         _favoriteView.translatesAutoresizingMaskIntoConstraints = NO;
         _favoriteView.hidden = YES;
         
@@ -81,39 +84,21 @@ static CGFloat const kCellContentIndex = 12;
     infoStackView.axis = UILayoutConstraintAxisVertical;
     infoStackView.distribution = UIStackViewDistributionEqualSpacing;
     infoStackView.alignment = UIStackViewAlignmentLeading;
-    infoStackView.spacing = kCellContentIndex;
+    infoStackView.spacing = kTextSpacingSize;
     infoStackView.backgroundColor = UIColor.whiteColor;
     return infoStackView;
 }
 
 -(UILabel *)_createNameLabel {
-    UILabel *name = [UILabel new];
-    name.numberOfLines = 0;
-    name.text = _event.name;
-    name.font = [name.font fontWithSize:24];
-    return name;
+    return [FetchThemeUtility CellTitle];
 }
 
 -(UILabel *)_createTimeLabel {
-    UILabel *time = [UILabel new];
-    time.numberOfLines = 0;
-    time.font = [time.font fontWithSize:18];
-    time.textColor = UIColor.grayColor;
-    return time;
-}
-
--(NSDateFormatter *)_eventFormatter {
-    NSDateFormatter *formatter = [FetchThemeUtility FetchEventDateFormatter];
-    return formatter;
+    return [FetchThemeUtility CellSubtitle];
 }
 
 -(UILabel *)_createLocationLabel {
-    UILabel *location = [UILabel new];
-    location.numberOfLines = 0;
-    location.text = _event.location;
-    location.font = [location.font fontWithSize:18];
-    location.textColor = UIColor.grayColor;
-    return location;
+    return [FetchThemeUtility CellSubtitle];
 }
 
 -(UIImageView *)_createImageView {
@@ -121,18 +106,18 @@ static CGFloat const kCellContentIndex = 12;
     imageView.backgroundColor = UIColor.blueColor;
     imageView.layer.cornerRadius = 10;
     imageView.clipsToBounds = YES;
-    [imageView.heightAnchor constraintEqualToConstant:80].active = YES;
-    [imageView.widthAnchor constraintEqualToConstant:80].active = YES;
+    [imageView.heightAnchor constraintEqualToConstant:kThumbnailSize].active = YES;
+    [imageView.widthAnchor constraintEqualToConstant:kThumbnailSize].active = YES;
     return imageView;
 }
 
 -(UIImageView *)_createFavoriteView {
     UIImageView *imageView = [UIImageView new];
-    imageView.backgroundColor = UIColor.blueColor;
     imageView.layer.cornerRadius = 10;
     imageView.clipsToBounds = YES;
-    [imageView.heightAnchor constraintEqualToConstant:40].active = YES;
-    [imageView.widthAnchor constraintEqualToConstant:40].active = YES;
+    imageView.image = [UIImage imageNamed:@"favorited.png"];
+    [imageView.heightAnchor constraintEqualToConstant:kFavoriteViewSize].active = YES;
+    [imageView.widthAnchor constraintEqualToConstant:kFavoriteViewSize].active = YES;
     return imageView;
 }
 

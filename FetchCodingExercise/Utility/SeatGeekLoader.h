@@ -6,13 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SeatGeeksEvent.h"
+#import "SeatGeekEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SeatGeekLoader : NSObject
 
--(NSArray<SeatGeeksEvent *> *)getEventData;
+-(NSArray<SeatGeekEvent *> *)getEventData;
 
 @end
 

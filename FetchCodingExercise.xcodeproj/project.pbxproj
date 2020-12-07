@@ -19,7 +19,7 @@
 		CC6780AA257C2ED500F4D36A /* FetchEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780A6257C2ED400F4D36A /* FetchEventDetailView.m */; };
 		CC6780AB257C2ED500F4D36A /* FetchEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780A8257C2ED500F4D36A /* FetchEventTableViewCell.m */; };
 		CC6780CC257C2EF700F4D36A /* FetchEventViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780CB257C2EF700F4D36A /* FetchEventViewModel.m */; };
-		CC6780D6257C304100F4D36A /* SeatGeeksEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780D1257C304100F4D36A /* SeatGeeksEvent.m */; };
+		CC6780D6257C304100F4D36A /* SeatGeekEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780D1257C304100F4D36A /* SeatGeekEvent.m */; };
 		CC6780D7257C304100F4D36A /* FetchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780D5257C304100F4D36A /* FetchEvent.m */; };
 		CC6780E7257C310B00F4D36A /* FetchEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780E3257C310B00F4D36A /* FetchEventDetailViewController.m */; };
 		CC6780E8257C310B00F4D36A /* FetchEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780E6257C310B00F4D36A /* FetchEventTableViewController.m */; };
@@ -28,6 +28,14 @@
 		CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67810A257C536B00F4D36A /* FetchRootViewController.m */; };
 		CC678110257C58FC00F4D36A /* FakeDataFile in Resources */ = {isa = PBXBuildFile; fileRef = CC67810F257C58FC00F4D36A /* FakeDataFile */; };
 		CCDE8A42257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */; };
+		CCDE8A4A257DB93400ACFB6B /* SeatGeekLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A49257DB93400ACFB6B /* SeatGeekLoaderTests.m */; };
+		CCDE8A52257DBA6500ACFB6B /* FetchFavoriteEventsManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A51257DBA6500ACFB6B /* FetchFavoriteEventsManagerTests.m */; };
+		CCDE8A5A257DC54D00ACFB6B /* FetchEventViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A59257DC54D00ACFB6B /* FetchEventViewModelTests.m */; };
+		CCDE8A60257DC57D00ACFB6B /* FetchTestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A5F257DC57D00ACFB6B /* FetchTestUtilities.m */; };
+		CCDE8A70257DD86D00ACFB6B /* favorited.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A6F257DD86D00ACFB6B /* favorited.jpg */; };
+		CCDE8A75257DD87500ACFB6B /* unfavorited.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A74257DD87500ACFB6B /* unfavorited.jpg */; };
+		CCDE8A7A257DDA5200ACFB6B /* favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A79257DDA5200ACFB6B /* favorited.png */; };
+		CCDE8A7F257DDA5900ACFB6B /* unfavorited.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A7E257DDA5900ACFB6B /* unfavorited.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +80,9 @@
 		CC6780A9257C2ED500F4D36A /* FetchEventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventDetailView.h; sourceTree = "<group>"; };
 		CC6780CA257C2EF700F4D36A /* FetchEventViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventViewModel.h; sourceTree = "<group>"; };
 		CC6780CB257C2EF700F4D36A /* FetchEventViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventViewModel.m; sourceTree = "<group>"; };
-		CC6780D1257C304100F4D36A /* SeatGeeksEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatGeeksEvent.m; sourceTree = "<group>"; };
+		CC6780D1257C304100F4D36A /* SeatGeekEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatGeekEvent.m; sourceTree = "<group>"; };
 		CC6780D2257C304100F4D36A /* FetchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEvent.h; sourceTree = "<group>"; };
-		CC6780D4257C304100F4D36A /* SeatGeeksEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatGeeksEvent.h; sourceTree = "<group>"; };
+		CC6780D4257C304100F4D36A /* SeatGeekEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatGeekEvent.h; sourceTree = "<group>"; };
 		CC6780D5257C304100F4D36A /* FetchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEvent.m; sourceTree = "<group>"; };
 		CC6780E3257C310B00F4D36A /* FetchEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventDetailViewController.m; sourceTree = "<group>"; };
 		CC6780E4257C310B00F4D36A /* FetchEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventDetailViewController.h; sourceTree = "<group>"; };
@@ -89,6 +97,15 @@
 		CC67810F257C58FC00F4D36A /* FakeDataFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = FakeDataFile; sourceTree = "<group>"; };
 		CCDE8A40257D6DCA00ACFB6B /* FetchFavoriteEventsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchFavoriteEventsManager.h; sourceTree = "<group>"; };
 		CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchFavoriteEventsManager.m; sourceTree = "<group>"; };
+		CCDE8A49257DB93400ACFB6B /* SeatGeekLoaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatGeekLoaderTests.m; sourceTree = "<group>"; };
+		CCDE8A51257DBA6500ACFB6B /* FetchFavoriteEventsManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchFavoriteEventsManagerTests.m; sourceTree = "<group>"; };
+		CCDE8A59257DC54D00ACFB6B /* FetchEventViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchEventViewModelTests.m; sourceTree = "<group>"; };
+		CCDE8A5E257DC57D00ACFB6B /* FetchTestUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchTestUtilities.h; sourceTree = "<group>"; };
+		CCDE8A5F257DC57D00ACFB6B /* FetchTestUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchTestUtilities.m; sourceTree = "<group>"; };
+		CCDE8A6F257DD86D00ACFB6B /* favorited.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = favorited.jpg; sourceTree = "<group>"; };
+		CCDE8A74257DD87500ACFB6B /* unfavorited.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unfavorited.jpg; sourceTree = "<group>"; };
+		CCDE8A79257DDA5200ACFB6B /* favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorited.png; sourceTree = "<group>"; };
+		CCDE8A7E257DDA5900ACFB6B /* unfavorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfavorited.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +156,7 @@
 		CC678066257C2E4900F4D36A /* FetchCodingExercise */ = {
 			isa = PBXGroup;
 			children = (
+				CCDE8A6D257DD85500ACFB6B /* Resources */,
 				CC6780E1257C30F300F4D36A /* ViewControllers */,
 				CC6780C9257C2EF700F4D36A /* ViewModels */,
 				CC6780A5257C2ED400F4D36A /* Views */,
@@ -146,7 +164,6 @@
 				CC6780EF257C35CD00F4D36A /* ApplicationSetup */,
 				CC6780F9257C3F1D00F4D36A /* Utility */,
 				CC678078257C2E4C00F4D36A /* Info.plist */,
-				CC67810F257C58FC00F4D36A /* FakeDataFile */,
 			);
 			path = FetchCodingExercise;
 			sourceTree = "<group>";
@@ -154,8 +171,14 @@
 		CC678082257C2E4C00F4D36A /* FetchCodingExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				CC67810F257C58FC00F4D36A /* FakeDataFile */,
 				CC678083257C2E4C00F4D36A /* FetchCodingExerciseTests.m */,
+				CCDE8A51257DBA6500ACFB6B /* FetchFavoriteEventsManagerTests.m */,
+				CCDE8A59257DC54D00ACFB6B /* FetchEventViewModelTests.m */,
+				CCDE8A49257DB93400ACFB6B /* SeatGeekLoaderTests.m */,
 				CC678085257C2E4C00F4D36A /* Info.plist */,
+				CCDE8A5E257DC57D00ACFB6B /* FetchTestUtilities.h */,
+				CCDE8A5F257DC57D00ACFB6B /* FetchTestUtilities.m */,
 			);
 			path = FetchCodingExerciseTests;
 			sourceTree = "<group>";
@@ -192,8 +215,8 @@
 		CC6780D0257C304100F4D36A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC6780D4257C304100F4D36A /* SeatGeeksEvent.h */,
-				CC6780D1257C304100F4D36A /* SeatGeeksEvent.m */,
+				CC6780D4257C304100F4D36A /* SeatGeekEvent.h */,
+				CC6780D1257C304100F4D36A /* SeatGeekEvent.m */,
 				CC6780D2257C304100F4D36A /* FetchEvent.h */,
 				CC6780D5257C304100F4D36A /* FetchEvent.m */,
 			);
@@ -242,6 +265,25 @@
 				CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		CCDE8A6D257DD85500ACFB6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCDE8A6E257DD86400ACFB6B /* Icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCDE8A6E257DD86400ACFB6B /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				CCDE8A79257DDA5200ACFB6B /* favorited.png */,
+				CCDE8A7E257DDA5900ACFB6B /* unfavorited.png */,
+				CCDE8A6F257DD86D00ACFB6B /* favorited.jpg */,
+				CCDE8A74257DD87500ACFB6B /* unfavorited.jpg */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,10 +388,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDE8A7A257DDA5200ACFB6B /* favorited.png in Resources */,
+				CCDE8A7F257DDA5900ACFB6B /* unfavorited.png in Resources */,
 				CC678077257C2E4C00F4D36A /* LaunchScreen.storyboard in Resources */,
 				CC678110257C58FC00F4D36A /* FakeDataFile in Resources */,
+				CCDE8A70257DD86D00ACFB6B /* favorited.jpg in Resources */,
 				CC678074257C2E4C00F4D36A /* Assets.xcassets in Resources */,
 				CC678072257C2E4900F4D36A /* Main.storyboard in Resources */,
+				CCDE8A75257DD87500ACFB6B /* unfavorited.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6780D6257C304100F4D36A /* SeatGeeksEvent.m in Sources */,
+				CC6780D6257C304100F4D36A /* SeatGeekEvent.m in Sources */,
 				CC67806F257C2E4900F4D36A /* ViewController.m in Sources */,
 				CC6780D7257C304100F4D36A /* FetchEvent.m in Sources */,
 				CC6780E8257C310B00F4D36A /* FetchEventTableViewController.m in Sources */,
@@ -396,7 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDE8A5A257DC54D00ACFB6B /* FetchEventViewModelTests.m in Sources */,
 				CC678084257C2E4C00F4D36A /* FetchCodingExerciseTests.m in Sources */,
+				CCDE8A4A257DB93400ACFB6B /* SeatGeekLoaderTests.m in Sources */,
+				CCDE8A60257DC57D00ACFB6B /* FetchTestUtilities.m in Sources */,
+				CCDE8A52257DBA6500ACFB6B /* FetchFavoriteEventsManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

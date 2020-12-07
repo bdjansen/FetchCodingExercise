@@ -13,6 +13,8 @@
 @implementation FetchEventViewModel {
     FetchEvent *_event;
     FetchFavoriteEventsManager *_favoritesManager;
+    UIImage *_favoritedButton;
+    UIImage *_unfavoritedButton;
 }
 
 -(instancetype)initWithEvent:(FetchEvent *)event {
@@ -40,9 +42,13 @@
 }
 
 -(NSString *)displayTime {
-    NSDateFormatter *timeFormat = [FetchThemeUtility FetchEventDateFormatter];
-    NSString *displayTime = [timeFormat stringFromDate:_event.time];
-    return displayTime;
+    if (_event.timeTBD) {
+        NSDateFormatter *timeFormat = [FetchThemeUtility FetchEventDateFormatter];
+        NSString *displayTime = [timeFormat stringFromDate:_event.time];
+        return displayTime;
+    } else {
+        return @"Time: TBD";
+    }
 }
 
 -(NSData *)thumbnail {
@@ -59,7 +65,7 @@
 }
 
 -(void)toggleFavoriteStatus {
-    _event.favorited = !_event.favorited;
+    [_event toggleFavoriteStatus];
     [self _updateFavoritesList];
 }
 
@@ -71,11 +77,7 @@
     }
 }
 
--(NSString *)buttonTitleForFavoriteStatus {
-    if (_event.favorited) {
-        return @"Unfavorite";
-    } else {
-        return @"Favorite";
-    }
+-(UIImage *)imageForFavoriteStatus {
+    return _event.favorited ? [FetchThemeUtility FavoriteButton] : [FetchThemeUtility UnfavoriteButton];
 }
 @end
