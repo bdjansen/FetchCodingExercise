@@ -25,7 +25,6 @@
 		CC6780E8257C310B00F4D36A /* FetchEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780E6257C310B00F4D36A /* FetchEventTableViewController.m */; };
 		CC6780FC257C3F3A00F4D36A /* FetchThemeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6780FB257C3F3900F4D36A /* FetchThemeUtility.m */; };
 		CC678105257C4D4600F4D36A /* SeatGeekLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CC678104257C4D4600F4D36A /* SeatGeekLoader.m */; };
-		CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67810A257C536B00F4D36A /* FetchRootViewController.m */; };
 		CC678110257C58FC00F4D36A /* FakeDataFile in Resources */ = {isa = PBXBuildFile; fileRef = CC67810F257C58FC00F4D36A /* FakeDataFile */; };
 		CCDE8A42257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */; };
 		CCDE8A4A257DB93400ACFB6B /* SeatGeekLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDE8A49257DB93400ACFB6B /* SeatGeekLoaderTests.m */; };
@@ -36,6 +35,7 @@
 		CCDE8A75257DD87500ACFB6B /* unfavorited.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A74257DD87500ACFB6B /* unfavorited.jpg */; };
 		CCDE8A7A257DDA5200ACFB6B /* favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A79257DDA5200ACFB6B /* favorited.png */; };
 		CCDE8A7F257DDA5900ACFB6B /* unfavorited.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDE8A7E257DDA5900ACFB6B /* unfavorited.png */; };
+		CCFF1D65257EE2A100A5D3E1 /* FetchRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF1D64257EE2A100A5D3E1 /* FetchRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +92,6 @@
 		CC6780FB257C3F3900F4D36A /* FetchThemeUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchThemeUtility.m; sourceTree = "<group>"; };
 		CC678103257C4D4600F4D36A /* SeatGeekLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatGeekLoader.h; sourceTree = "<group>"; };
 		CC678104257C4D4600F4D36A /* SeatGeekLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatGeekLoader.m; sourceTree = "<group>"; };
-		CC678109257C536B00F4D36A /* FetchRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchRootViewController.h; sourceTree = "<group>"; };
-		CC67810A257C536B00F4D36A /* FetchRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchRootViewController.m; sourceTree = "<group>"; };
 		CC67810F257C58FC00F4D36A /* FakeDataFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = FakeDataFile; sourceTree = "<group>"; };
 		CCDE8A40257D6DCA00ACFB6B /* FetchFavoriteEventsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchFavoriteEventsManager.h; sourceTree = "<group>"; };
 		CCDE8A41257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchFavoriteEventsManager.m; sourceTree = "<group>"; };
@@ -106,6 +104,8 @@
 		CCDE8A74257DD87500ACFB6B /* unfavorited.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unfavorited.jpg; sourceTree = "<group>"; };
 		CCDE8A79257DDA5200ACFB6B /* favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorited.png; sourceTree = "<group>"; };
 		CCDE8A7E257DDA5900ACFB6B /* unfavorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfavorited.png; sourceTree = "<group>"; };
+		CCFF1D63257EE2A100A5D3E1 /* FetchRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FetchRootViewController.h; path = FetchCodingExercise/ViewControllers/FetchRootViewController.h; sourceTree = SOURCE_ROOT; };
+		CCFF1D64257EE2A100A5D3E1 /* FetchRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FetchRootViewController.m; path = FetchCodingExercise/ViewControllers/FetchRootViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,8 +230,8 @@
 				CC6780E3257C310B00F4D36A /* FetchEventDetailViewController.m */,
 				CC6780E5257C310B00F4D36A /* FetchEventTableViewController.h */,
 				CC6780E6257C310B00F4D36A /* FetchEventTableViewController.m */,
-				CC678109257C536B00F4D36A /* FetchRootViewController.h */,
-				CC67810A257C536B00F4D36A /* FetchRootViewController.m */,
+				CCFF1D63257EE2A100A5D3E1 /* FetchRootViewController.h */,
+				CCFF1D64257EE2A100A5D3E1 /* FetchRootViewController.m */,
 			);
 			name = ViewControllers;
 			path = ../../FetchSeatGeekExercise/Shared/ViewControllers;
@@ -428,11 +428,11 @@
 				CCDE8A42257D6DCA00ACFB6B /* FetchFavoriteEventsManager.m in Sources */,
 				CC678105257C4D4600F4D36A /* SeatGeekLoader.m in Sources */,
 				CC6780CC257C2EF700F4D36A /* FetchEventViewModel.m in Sources */,
-				CC67810B257C536B00F4D36A /* FetchRootViewController.m in Sources */,
 				CC678069257C2E4900F4D36A /* AppDelegate.m in Sources */,
 				CC6780AB257C2ED500F4D36A /* FetchEventTableViewCell.m in Sources */,
 				CC67807A257C2E4C00F4D36A /* main.m in Sources */,
 				CC6780E7257C310B00F4D36A /* FetchEventDetailViewController.m in Sources */,
+				CCFF1D65257EE2A100A5D3E1 /* FetchRootViewController.m in Sources */,
 				CC67806C257C2E4900F4D36A /* SceneDelegate.m in Sources */,
 				CC6780FC257C3F3A00F4D36A /* FetchThemeUtility.m in Sources */,
 			);
