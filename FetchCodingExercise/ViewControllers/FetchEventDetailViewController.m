@@ -7,7 +7,6 @@
 
 #import "FetchEventDetailViewController.h"
 #import "FetchEventDetailView.h"
-#import "FetchEventViewModel.h"
 
 @implementation FetchEventDetailViewController {
     FetchEventViewModel *_event;
@@ -22,23 +21,25 @@
 }
 
 -(void)loadView {
+    [self _displayDetailedView];
+    [self _addFavoriteButton];
+}
+
+-(void)_displayDetailedView {
     FetchEventDetailView *eventView = [[FetchEventDetailView alloc] initWithEvent:_event];
+    UIImage *image = [UIImage imageWithData:_event.image];
+    [eventView setImage:image];
     self.view = eventView;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)_addFavoriteButton {
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithImage:[_event imageForFavoriteStatus] style:UIBarButtonItemStylePlain target:self action:@selector(_toggleFavoriteStatus)];
+    self.navigationItem.rightBarButtonItem = button;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)_toggleFavoriteStatus {
+    [_event toggleFavoriteStatus];
+    self.navigationItem.rightBarButtonItem.image = [_event imageForFavoriteStatus];
 }
-*/
 
 @end

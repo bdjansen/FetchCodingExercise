@@ -6,7 +6,6 @@
 //
 
 #import "FetchEventTableViewController.h"
-#import "FetchEventViewModel.h"
 #import "FetchEventTableViewCell.h"
 #import "FetchEventDetailViewController.h"
 
@@ -14,26 +13,31 @@
 
 @end
 
+// Constants
+static NSString *const kCellIdentifier = @"EventCell";
+
 @implementation FetchEventTableViewController {
     NSArray<FetchEventViewModel *> *_events;
+    NSArray<FetchEventViewModel *> *_filteredEvents;
 }
 
 -(instancetype)initWithEvents:(NSArray<FetchEventViewModel *> *)events {
     self = [super init];
     if (self) {
         _events = events;
+        _filteredEvents = @[];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:FetchEventTableViewCell.class forCellReuseIdentifier:kCellIdentifier];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -43,13 +47,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (_filteredEvents.count) {
+        return _filteredEvents.count;
+    }
+        
     return _events.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FetchEventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell" forIndexPath:indexPath];
+    FetchEventViewModel *event;
+    if (_filteredEvents.count) {
+        event = _filteredEvents[indexPath.row];
+    } else {
+        event = _events[indexPath.row];
+    }
     
-    cell.event = _events[indexPath.row];
+    UIImage *thumbnail = [UIImage imageWithData: event.thumbnail];
+    
+    FetchEventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    cell.event = event;
+    cell.thumbnail = thumbnail;
     
     return cell;
 }
@@ -57,6 +74,25 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FetchEventDetailViewController *eventDetailVC = [[FetchEventDetailViewController alloc] initWithEvent:_events[indexPath.row]];
     [self.navigationController pushViewController:eventDetailVC animated:YES];
+}
+
+#pragma mark - UISearchResultsUpdating
+
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSMutableArray *array = [NSMutableArray new];
+    for (FetchEventViewModel *event in _events) {
+        if ([event.name.lowercaseString containsString:searchController.searchBar.text.lowercaseString]) {
+            [array addObject:event];
+        }
+    }
+    
+    if (searchController.isActive && searchController.searchBar.text.length) {
+        _filteredEvents = array;
+    } else {
+        _filteredEvents = @[];
+    }
+    
+    [self.tableView reloadData];
 }
 
 @end

@@ -6,12 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FetchEventViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class FetchEventViewModel;
-
-@interface FetchEventTableViewController : UITableViewController
+@interface FetchEventTableViewController : UITableViewController <UISearchResultsUpdating>
 
 -(instancetype)initWithEvents:(NSArray<FetchEventViewModel *> *)events;
 

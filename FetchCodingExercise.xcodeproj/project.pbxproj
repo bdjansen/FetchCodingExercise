@@ -100,12 +100,12 @@
 		CCDE8A74257DD87500ACFB6B /* unfavorited.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unfavorited.jpg; sourceTree = "<group>"; };
 		CCDE8A79257DDA5200ACFB6B /* favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorited.png; sourceTree = "<group>"; };
 		CCDE8A7E257DDA5900ACFB6B /* unfavorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfavorited.png; sourceTree = "<group>"; };
-		CCFF1D63257EE2A100A5D3E1 /* FetchRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FetchRootViewController.h; path = FetchCodingExercise/ViewControllers/FetchRootViewController.h; sourceTree = SOURCE_ROOT; };
+		CCFF1D63257EE2A100A5D3E1 /* FetchRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchRootViewController.h; sourceTree = "<group>"; };
 		CCFF1D64257EE2A100A5D3E1 /* FetchRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FetchRootViewController.m; path = FetchCodingExercise/ViewControllers/FetchRootViewController.m; sourceTree = SOURCE_ROOT; };
-		CCFF1D72257EFD2700A5D3E1 /* FetchEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchEventTableViewController.m; path = ../FetchSeatGeekExercise/Shared/ViewControllers/FetchEventTableViewController.m; sourceTree = SOURCE_ROOT; };
-		CCFF1D73257EFD2700A5D3E1 /* FetchEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchEventTableViewController.h; path = ../FetchSeatGeekExercise/Shared/ViewControllers/FetchEventTableViewController.h; sourceTree = SOURCE_ROOT; };
-		CCFF1D74257EFD2700A5D3E1 /* FetchEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchEventDetailViewController.m; path = ../FetchSeatGeekExercise/Shared/ViewControllers/FetchEventDetailViewController.m; sourceTree = SOURCE_ROOT; };
-		CCFF1D75257EFD2700A5D3E1 /* FetchEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchEventDetailViewController.h; path = ../FetchSeatGeekExercise/Shared/ViewControllers/FetchEventDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		CCFF1D72257EFD2700A5D3E1 /* FetchEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchEventTableViewController.m; path = "../../../../Downloads/FetchCodingExercise-main/FetchCodingExercise/ViewControllers/FetchEventTableViewController.m"; sourceTree = "<group>"; };
+		CCFF1D73257EFD2700A5D3E1 /* FetchEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventTableViewController.h; sourceTree = "<group>"; };
+		CCFF1D74257EFD2700A5D3E1 /* FetchEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventDetailViewController.m; sourceTree = "<group>"; };
+		CCFF1D75257EFD2700A5D3E1 /* FetchEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventDetailViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,9 +233,8 @@
 				CCFF1D63257EE2A100A5D3E1 /* FetchRootViewController.h */,
 				CCFF1D64257EE2A100A5D3E1 /* FetchRootViewController.m */,
 			);
-			name = ViewControllers;
-			path = ../FetchSeatGeekExercise/Shared/ViewControllers;
-			sourceTree = SOURCE_ROOT;
+			path = ViewControllers;
+			sourceTree = "<group>";
 		};
 		CC6780EF257C35CD00F4D36A /* ApplicationSetup */ = {
 			isa = PBXGroup;

@@ -6,10 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FetchEventViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@class FetchEventViewModel;
 
 @interface FetchEventDetailViewController : UIViewController
 
